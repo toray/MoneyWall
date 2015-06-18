@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="actionbar_selector_color">#8d000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="half_transparent">#C0000000</color>
+    <color name="six_transparent">#99000000</color>
+    <color name="three_transparent">#4c000000</color>
+    <color name="nine_transparent">#dd171614</color>
+    <color name="actionbar_bg">#232D2E</color>
+    <color name="white">#ffffff</color>
+    <color name="fifth_white">#88ffffff</color>
+    <color name="default_bg">#f5f5f5</color>
+    <color name="grey_first_bg">#fff0f0f0</color>
+    <color name="divider">#c5c5c5</color>
+    <color name="divider_setting">#cbcbcb</color>
+    <color name="divider_border">#cacaca</color>
+    <color name="list_normal_bg">#ffffffff</color>
+    <color name="list_pressed_bg">#ffebebeb</color>
+    <color name="text_black_first">#484848</color>
+    <color name="text_black_second">#2d2d2d</color>
+    <color name="text_black_third">#ff333333</color>
+    <color name="text_black_fourth">#ff666666</color>
+    <color name="text_black_fifth">#ff999999</color>
+    <color name="text_shadow_first">#229e7f</color>
+    <color name="text_shadow_second">#9f9f9f</color>
+    <color name="text_grey_frist">#504f4f</color>
+    <color name="text_grey_second">#a2a2a2</color>
+    <color name="text_grey_third">#555555</color>
+    <color name="text_grey_fourth">#ffd2d2d2</color>
+    <color name="text_grey_fifth">#ffced1d1</color>
+    <color name="text_grey_sixth">#ff555d5d</color>
+    <color name="text_grey_seventh">#ff5a5a5a</color>
+    <color name="text_grey_eighth">#ff282828</color>
+    <color name="text_grey_nineth">#ff707070</color>
+    <color name="text_green_frist">#37bc9b</color>
+    <color name="text_green_second">#ff25cb8a</color>
+    <color name="text_green_third">#ff4ef0d3</color>
+    <color name="text_green_fourth">#ff12b6b3</color>
+    <color name="text_green_fifth">#ff0cc7a6</color>
+    <color name="select_item">#E3E4E7</color>
+    <color name="text_red_first">#ffed3a53</color>
+    <color name="text_red_second">#ffb33451</color>
+    <color name="text_red_third">#ffff485e</color>
+    <color name="locus_normal_bg">#ff2e3332</color>
+    <color name="security_spinner_bg">#ff383c3d</color>
+
+</resources>

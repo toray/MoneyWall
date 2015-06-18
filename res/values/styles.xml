@@ -1,0 +1,21 @@
+<resources>
+
+    <style name="CustomDialog" parent="android:Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+     <style name="AdsDialog" parent="android:Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    
+     <style name="AppPopWindow"></style>
+    
+     <style name="AppPopWindow.Anim">
+        <item name="android:windowEnterAnimation">@anim/anim_popwindow_show</item>
+        <item name="android:windowExitAnimation">@anim/anim_popwindow_hide</item>
+    </style>
+</resources>

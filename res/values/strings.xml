@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="btn_invite">立即邀请</string>
+    <string name="btn_install">安装</string>
+    
+    
+    <string name="ads_app_title">金币不足，还需%1$d金币</string>
+    <string name="ads_app_points_tips">安装后10分钟内打开一次应用即可自动获得金币哦~</string>
+    <string name="btn_more_points">更多金币</string>
+    <string name="btn_install_points">一键领取%1$d金币</string>
+    <string name="ads_app_points">＋%1$d金币</string>
+    <string name="ads_app_rec">推荐</string>
+    
+</resources>
