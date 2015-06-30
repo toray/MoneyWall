@@ -1,8 +1,8 @@
 package net.tr.moneywall;
 
 import net.tr.wxtheme.AppConnect;
-import net.youmi.android.AdManager;
-import net.youmi.android.offers.OffersManager;
+import a.b.c.AdManager;
+import a.b.c.os.OffersManager;
 import android.app.Activity;
 import cn.aow.android.DAOW;
 

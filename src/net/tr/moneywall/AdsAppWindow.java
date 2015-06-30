@@ -11,14 +11,9 @@ import java.util.List;
 import java.util.Set;
 
 import net.tr.moneywall_lib.R;
-import net.youmi.android.offers.OffersManager;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
+import a.b.c.os.OffersManager;
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Handler;
@@ -41,11 +36,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.ImageLoader.ImageContainer;
-import com.android.volley.toolbox.ImageLoader.ImageListener;
 import com.nostra13.universalimageloader.ImageLoaderManager;
-import com.toraysoft.manager.AppManager;
 import com.toraysoft.widget.viewpagertabicon.ViewPagerTabIcon;
 import com.ztzhushou.DevInit;
 import com.ztzhushou.GetAdListListener;
