@@ -12,7 +12,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -40,7 +39,7 @@ public class MoneysApp {
 	Object app;
 	int type;
 	String desc;
-	String limit;
+	String size;
 	boolean isCheck;
 	public MoneysApp(Npau app){
 		this.mAppChannelType = AppChannelType.YOUMI;
@@ -50,7 +49,7 @@ public class MoneysApp {
 		this.points = app.mdx();
 		this.app = app;
 		this.desc = app.mdh();
-		this.limit = app.mdn();
+		this.size = app.mdn();
 		System.out.println("==========name============"+name);
 	}
 	
@@ -200,7 +199,7 @@ public class MoneysApp {
 	public String getDesc(){
 		return desc;
 	}
-	public String getLimmit(){
-		return limit;
+	public String getSize(){
+		return size;
 	}
 }
