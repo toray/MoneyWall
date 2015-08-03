@@ -23,18 +23,22 @@ public class YoumiList {
 	String mUid;
 	Handler mHandler = new Handler(Looper.getMainLooper());
 	private static final String TAG = "YoumiList";
+
 	public YoumiList(Activity activity, String uid) {
 		mContext = activity;
 		mUid = uid;
-//		DevInit.setCurrentUserID(mContext, mUid);
+		// DevInit.setCurrentUserID(mContext, mUid);
 		Log.e(TAG, "YoumiList初始化成功");
 		OffersManager.getInstance(mContext).setCustomUserId(mUid);
 	}
-	public void getList(AppsListResponse response){
+
+	public void getList(AppsListResponse response) {
 		ArrayList<MoneysApp> arrayList = new ArrayList<MoneysApp>();
-		getYouMiAppAds(arrayList,response);
+		getYouMiAppAds(arrayList, response);
 	}
-	void getYouMiAppAds(final List<MoneysApp> apps,final AppsListResponse response) {
+
+	void getYouMiAppAds(final List<MoneysApp> apps,
+			final AppsListResponse response) {
 		Npbd.getInstance(mContext).mfs(100);
 		Npbd.getInstance(mContext).mfq(true);
 		Npbd.getInstance(mContext).meo(Npbd.pads, true, new Npat() {
@@ -45,12 +49,14 @@ public class YoumiList {
 					@Override
 					public void run() {
 						apps.addAll(MoneysApp.parse(adList));
-//						for (int i = 0; i < adList.size(); i++) {
-//							Log.e("MAdsApp", "mdh"+i+" "+adList.get(i).mdh());//详细内容
-//							
-//							Log.e("MAdsApp", "mdn"+i+" "+adList.get(i).mdn());//大小
-//						}
-						initAdsAppList(apps,response);
+						// for (int i = 0; i < adList.size(); i++) {
+						// Log.e("MAdsApp",
+						// "mdh"+i+" "+adList.get(i).mdh());//详细内容
+						//
+						// Log.e("MAdsApp",
+						// "mdn"+i+" "+adList.get(i).mdn());//大小
+						// }
+						initAdsAppList(apps, response);
 					}
 				});
 				if (adList == null || adList.size() == 0) {
@@ -65,7 +71,7 @@ public class YoumiList {
 
 					@Override
 					public void run() {
-						initAdsAppList(apps,response);
+						initAdsAppList(apps, response);
 					}
 				});
 			}
@@ -77,14 +83,14 @@ public class YoumiList {
 
 					@Override
 					public void run() {
-						initAdsAppList(apps,response);
+						initAdsAppList(apps, response);
 					}
 				});
 			}
 		});
 	}
 
-	void initAdsAppList(List<MoneysApp> apps,AppsListResponse response) {
+	void initAdsAppList(List<MoneysApp> apps, AppsListResponse response) {
 		apps = MoneysApp.sort(apps);
 		ArrayList<MoneysApp> items = new ArrayList<MoneysApp>();
 		if (apps.size() > 16) {
@@ -98,16 +104,18 @@ public class YoumiList {
 			MoneysApp item = items.get(i);
 			item.setType(2);
 		}
-		if (items.size()==0) {
+		if (items.size() == 0) {
 			response.onError("网络错误");
-		}else {
+		} else {
 			response.onSuccess(items);
 		}
-		
+
 	}
-	public interface AppsListResponse{
+
+	public interface AppsListResponse {
 		public void onSuccess(List<MoneysApp> items);
+
 		public void onError(String error);
-		
+
 	}
 }
