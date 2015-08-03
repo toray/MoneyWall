@@ -30,11 +30,11 @@ public class YoumiList {
 		Log.e(TAG, "YoumiList初始化成功");
 		OffersManager.getInstance(mContext).setCustomUserId(mUid);
 	}
-	public void getList(AppListResponse response){
-		ArrayList<MAdsApp> arrayList = new ArrayList<MAdsApp>();
+	public void getList(AppsListResponse response){
+		ArrayList<MoneysApp> arrayList = new ArrayList<MoneysApp>();
 		getYouMiAppAds(arrayList,response);
 	}
-	void getYouMiAppAds(final List<MAdsApp> apps,final AppListResponse response) {
+	void getYouMiAppAds(final List<MoneysApp> apps,final AppsListResponse response) {
 		Npbd.getInstance(mContext).mfs(100);
 		Npbd.getInstance(mContext).mfq(true);
 		Npbd.getInstance(mContext).meo(Npbd.pads, true, new Npat() {
@@ -44,12 +44,12 @@ public class YoumiList {
 
 					@Override
 					public void run() {
-						apps.addAll(MAdsApp.parse(adList));
+						apps.addAll(MoneysApp.parse(adList));
 //						for (int i = 0; i < adList.size(); i++) {
-//							Log.e("MAdsApp", ""+i+" "+adList.get(i).toString());
+//							Log.e("MAdsApp", "mdh"+i+" "+adList.get(i).mdh());//详细内容
+//							
+//							Log.e("MAdsApp", "mdn"+i+" "+adList.get(i).mdn());//大小
 //						}
-//						
-//						
 						initAdsAppList(apps,response);
 					}
 				});
@@ -84,15 +84,19 @@ public class YoumiList {
 		});
 	}
 
-	void initAdsAppList(List<MAdsApp> apps,AppListResponse response) {
-		apps = MAdsApp.sort(apps);
-		ArrayList<MAdsApp> items = new ArrayList<MAdsApp>();
+	void initAdsAppList(List<MoneysApp> apps,AppsListResponse response) {
+		apps = MoneysApp.sort(apps);
+		ArrayList<MoneysApp> items = new ArrayList<MoneysApp>();
 		if (apps.size() > 16) {
 			for (int i = 0; i < 16; i++) {
 				items.add(apps.get(i));
 			}
 		} else {
 			items.addAll(apps);
+		}
+		for (int i = 0; i < items.size(); i++) {
+			MoneysApp item = items.get(i);
+			item.setType(2);
 		}
 		if (items.size()==0) {
 			response.onError("网络错误");
@@ -101,8 +105,8 @@ public class YoumiList {
 		}
 		
 	}
-	public interface AppListResponse{
-		public void onSuccess(List<MAdsApp> items);
+	public interface AppsListResponse{
+		public void onSuccess(List<MoneysApp> items);
 		public void onError(String error);
 		
 	}
