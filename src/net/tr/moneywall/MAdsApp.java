@@ -38,8 +38,10 @@ public class MAdsApp {
 	String icon;
 	String url;
 	int points;
+	int type;
 	Object app;
 	boolean isCheck;
+	int t=2;
 	
 	public MAdsApp(Npau app){
 		this.mAppChannelType = AppChannelType.YOUMI;
@@ -47,6 +49,7 @@ public class MAdsApp {
 		this.name = app.mdm();
 		this.icon = app.mdt();
 		this.points = app.mdx();
+		this.type=t;
 		this.app = app;
 		
 		System.out.println("==========name============"+name);
@@ -58,6 +61,7 @@ public class MAdsApp {
 		this.name = app.getAdName();
 		this.icon = app.getAdIconUrl();
 		this.points = app.getAdPoint();
+		this.type=t;
 		this.app = app;
 	}
 	
@@ -68,6 +72,7 @@ public class MAdsApp {
 		this.icon = app.get("icon").toString();
 		this.points = Integer.parseInt(app.get("number").toString());
 		this.app = app;
+		this.type=t;
 		System.out.println("======================"+name);
 	}
 	
@@ -76,6 +81,7 @@ public class MAdsApp {
 		this.name = app.getString("n");
 		this.icon = app.getString("i");
 		this.isCheck = true;
+		this.type=t;
 		this.app = app;
 	}
 	
@@ -188,6 +194,14 @@ public class MAdsApp {
 
 	public boolean isCheck() {
 		return isCheck;
+	}
+	
+	public int gettype() {
+		return type;
+	}
+
+	public int settype() {
+		return type;
 	}
 	
 }
