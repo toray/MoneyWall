@@ -86,7 +86,6 @@ public class AdsAppWindow extends Base {
 		setTitle(points);
 		btn_install.setText(mContext.getString(R.string.btn_install_points, 0));
 
-		btn_more.setOnClickListener(onBtnMoreClickListener);
 		btn_install.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -563,11 +562,11 @@ public class AdsAppWindow extends Base {
 
 			}
 		}
-
 	}
 
 	public void setOnBtnMoreClickListener(OnClickListener onBtnMoreClickListener) {
 		this.onBtnMoreClickListener = onBtnMoreClickListener;
+		btn_more.setOnClickListener(onBtnMoreClickListener);
 	}
 
 	public static interface OnInitAppListListener {
